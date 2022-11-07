@@ -1,6 +1,6 @@
 
   //MODAL-LOG
-  const openModal = document.getElementById("btn-login")
+  const openModal = document.getElementById("open-modal")
   const closeModal = document.getElementById("modal-cerrar")
   const modalContain = document.getElementById("modal-container")
 
@@ -12,7 +12,7 @@
   
   closeModal.addEventListener("click", () => {
     modalContain.classList.remove("modal-container-active")
-    console.log("funciona el boton")
+    console.log("funciona el boton d cierre")
   })
 
 
