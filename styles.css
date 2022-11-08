@@ -12,12 +12,18 @@
   }
 
   #search-input{
-    padding: 6px;
+    padding: 8px;
     border-radius: 6px;
     border: transparent;
     background-color: rgb(177, 173, 236);
+    width: 320px;
   }
-
+  .carrito-image{
+   width: 32px;
+   cursor: pointer;
+    
+  }
+  
 
   #search-button, #add{
     padding: 8px;
