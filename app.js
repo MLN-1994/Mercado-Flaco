@@ -1,5 +1,5 @@
 
-  //MODAL-LOG
+  //MODAL-CARRITO
   const openModal = document.getElementById("open-modal")
   const closeModal = document.getElementById("modal-cerrar")
   const modalContain = document.getElementById("modal-container")
@@ -46,6 +46,7 @@ function Item(item){
   
   const items = [
     {
+    id: 1,
     image : "https://http2.mlstatic.com/D_Q_NP_667712-MLA46445221923_062021-AB.webp",
     title : "Kit teclado y mous 1",
     price :  9599,
@@ -53,6 +54,7 @@ function Item(item){
     description:"Kit de teclado y mouse gamer Razer Cynosa Lite + Abyssus Lite Español de color negro"
   },
     {
+    id: 2,  
     image : "https://http2.mlstatic.com/D_Q_NP_667712-MLA46445221923_062021-AB.webp",
     title : "Kit Gamer Tedge Teclado + Mouse + Auriculares Color Negro",
     price : 9599,
@@ -60,6 +62,7 @@ function Item(item){
     description:"Kit de teclado y mouse gamer Razer Cynosa Lite + Abyssus Lite Español de color negro"
   },
     {
+    id: 3,
     image : "https://http2.mlstatic.com/D_Q_NP_667712-MLA46445221923_062021-AB.webp",
     title : "Kit teclado y mous 2",
     price : 9599,
@@ -67,6 +70,7 @@ function Item(item){
     description:"Kit de teclado y mouse gamer Razer Cynosa Lite + Abyssus Lite Español de color negro"
   },
     {
+    id: 4,
     image : "https://http2.mlstatic.com/D_Q_NP_667712-MLA46445221923_062021-AB.webp",
     title : "Kit teclado y mous 2",
     price : 9599,
@@ -74,6 +78,7 @@ function Item(item){
     description:"Kit de teclado y mouse gamer Razer Cynosa Lite + Abyssus Lite Español de color negro"
   },
     {
+    id: 5,
     image : "https://http2.mlstatic.com/D_Q_NP_667712-MLA46445221923_062021-AB.webp",
     title : "Kit teclado y mous 2",
     price : 9599,
@@ -81,6 +86,7 @@ function Item(item){
     description:"Kit de teclado y mouse gamer Razer Cynosa Lite + Abyssus Lite Español de color negro"
   },
     {
+    id: 6,
     image : "https://http2.mlstatic.com/D_Q_NP_667712-MLA46445221923_062021-AB.webp",
     title : "Kit teclado y mous 2",
     price : 9599,
