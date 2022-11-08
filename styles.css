@@ -34,6 +34,9 @@
   background-color: rgb(124, 116, 240);
   color: white;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
 }
 
 .modal-container {
@@ -72,6 +75,8 @@
 }
 
 .product-box {
+  display: flex;
+  flex-direction: column;
   width: 300px;
   padding: 16px;
   margin-top: 0;
@@ -86,7 +91,11 @@
 }
 
 .btn {
-  
+  display: flex;
+}
+
+.info{
+  flex-grow: 1;
 }
 
 .title-price{
