@@ -56,7 +56,7 @@ const items = [
   {
     id: 2,
     image: "https://http2.mlstatic.com/D_Q_NP_667712-MLA46445221923_062021-AB.webp",
-    title: "Kit Gamer Tedge Teclado + Mouse + Auriculares Color Negro",
+    title: "Computadora",
     price: 9599,
     dues: 1599.83,
     description: "Kit de teclado y mouse gamer Razer Cynosa Lite + Abyssus Lite Español de color negro"
@@ -95,15 +95,43 @@ const items = [
   },
 ]
 
-items.forEach((item) => {
-  addItem(item)
-})
+// ad initial items
+const setInitialItems = () => {
 
-//PRODUCT-FILTER
+  items.forEach((item) => { addItem(item) });
 
-const searchBtn = document.getElementById("search-button")
-searchBtn.addEventListener("click", () => {
-  const searchInput = document.getElementById("search-input").value
+};
 
-  console.log(searchInput)
-})
+setInitialItems();
+
+// Filtra los productos por el nombre y los agrega al DOM
+function searchItem(title){
+
+  // Items filtrados
+  const filteredItems = items.filter((item) => {
+
+    const itemTitle = item.title.toLowerCase();
+    const searchTitle = title.toLowerCase();
+
+
+    return itemTitle.includes(searchTitle);
+
+  });
+
+  // Limpiar el listado de items
+  document.getElementById("products-contain").innerHTML = "";
+
+  // Agregar los items filtrados
+  filteredItems.forEach((item) => { addItem(item) });
+
+}
+
+// Search input
+const searchInput = document.querySelector('#search-input');
+
+// detectar cambios en el input
+searchInput.addEventListener("keyup", (event) => {
+
+  searchItem(event.target.value);
+
+});
