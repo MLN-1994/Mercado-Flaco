@@ -104,6 +104,16 @@ const setInitialItems = () => {
 
 setInitialItems();
 
+
+//AGREGAR A CARRITO
+  const addToCart = (id) =>{
+    const product = items.find( (item) => item.id === id )
+    items.push(product)
+    console.log(product)
+  }
+  addToCart(4)
+  addToCart(6)
+
 // Filtra los productos por el nombre y los agrega al DOM
 function searchItem(title){
 
