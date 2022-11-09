@@ -35,7 +35,7 @@ function Item(item) {
         <span class="description">${item.description}</span>
       </div>
       <div class="btn">
-        <buttom id="add">Sumar</buttom>
+        <buttom id="add" class="add">Sumar</buttom>
     </div>
   </div>`
 }
