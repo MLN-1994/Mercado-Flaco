@@ -38,6 +38,8 @@ function Item(item) {
         <buttom id="add" class="add">Sumar</buttom>
     </div>
   </div>`
+
+
 }
 
 function addItem(item) {
@@ -136,18 +138,29 @@ const setInitialItems = () => {
 
 setInitialItems();
 
+//CARRITO
+const cart = []
+
+const btnAdd = document.querySelector("#add")
+btnAdd.addEventListener("click", () => {
+  const sumar = items.find((item) => item.id === items.id)
+  cart.push(sumar)
+  console.log(cart)
+
+})
+
 
 //AGREGAR A CARRITO
-  const addToCart = (id) =>{
-    const product = items.find( (item) => item.id === id )
-    items.push(product)
-    console.log(product)
-  }
-  addToCart(4)
-  addToCart(6)
+// const addToCart = (id) =>{
+//   const product = items.find( (item) => item.id === id )
+//   cart.push(product)
+//   console.log(product)
+// }
+// addToCart(4)
+// addToCart(6)
 
 // Filtra los productos por el nombre y los agrega al DOM
-function searchItem(title){
+function searchItem(title) {
 
   // Items filtrados
   const filteredItems = items.filter((item) => {

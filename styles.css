@@ -67,6 +67,7 @@
   visibility: visible;
 }
 
+
 .products-contain {
   padding: 30px;
   display: grid;
@@ -94,18 +95,19 @@
   display: flex;
 }
 
-.info{
+.info {
   flex-grow: 1;
 }
 
-.title-price{
+.title-price {
   margin: 12px 0px;
 }
 
-.price{
+.price {
   margin: 12px 0px;
 }
-.description{
+
+.description {
   color: rgb(112, 111, 111);
   font-size: 14px;
 }
