@@ -21,6 +21,9 @@ closeModal.addEventListener("click", () => {
 function Item(item) {
 
   return `<div class="product-box">
+  <div class="like-contain">
+    <img class="like" id="like" src="./images/me-gusta.png">
+  </div>
       <div class="img-contain">
         <img class="img-product" src="${item.image}" alt="">
       </div>

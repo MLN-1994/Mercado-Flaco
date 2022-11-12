@@ -116,3 +116,12 @@
   display: flex;
   align-items: center;
 }
+.like-contain{
+  display: flex;
+  justify-content: end;
+  padding: 2px;
+}
+.like{
+  width: 20px;
+  cursor: pointer;
+}
