@@ -25,13 +25,22 @@
 
 }
 
-
+.count-cart-favs{
+  position: absolute;
+  top: 34px;
+  color: blue;
+  background: red;
+  border-radius: 100%;
+  width: 16px;
+  text-align: center;
+  /*visibility: hidden;*/
+}
 
 .add {
   padding: 8px;
   border-radius: 6px;
   border: transparent;
-  background-color: rgb(124, 116, 240);
+  background-color: rgb(43 103 226);;
   color: white;
   cursor: pointer;
   width: 100%;
