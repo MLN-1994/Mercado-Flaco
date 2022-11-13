@@ -66,6 +66,14 @@
   opacity: 1;
   visibility: visible;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.favs-img{
+  width: 30px;
+}
 
 
 .products-contain {
@@ -112,10 +120,7 @@
   font-size: 14px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
+
 .like-contain{
   display: flex;
   justify-content: end;
