@@ -81,8 +81,8 @@
   width: 300px;
   padding: 16px;
   margin-top: 0;
-  background: rgb(240, 236, 236);
   border-radius: 6px;
+  border: solid 1px;
 }
 
 
