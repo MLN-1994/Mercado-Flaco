@@ -142,14 +142,14 @@ const setInitialItems = () => {
 setInitialItems();
 
 //CARRITO
-const cart = []
 
+
+const cart = []
 const btnAdd = document.querySelector("#add")
 btnAdd.addEventListener("click", () => {
   const sumar = items.find((item) => item.id === item.id)
   cart.push(sumar)
   console.log(cart)
-
 })
 
 
