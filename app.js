@@ -1,19 +1,74 @@
 
+let cartItems = []
+
 //MODAL-CARRITO
 const openModal = document.querySelector("#open-modal")
 const closeModal = document.querySelector("#modal-close")
 const modalContain = document.querySelector("#modal-container")
 
-openModal.addEventListener("click", () => {
+
+
+function deleteItem(id) {
+
+  document.querySelector("#cart-items").innerHTML = ""
+
+  
+  const newCartsItems = cartItems.filter((item) => item.id != id);
+
+   newCartsItems.forEach((item) => {
+    addItemCart(item)
+   });
+
+   cartItems = newCartsItems
+}
+
+
+
+openModal?.addEventListener("click", () => {
+
+
+  cartItems.forEach((item) => {
+    addItemCart(item)
+  });
+
+
+
   modalContain.classList.add("modal-container-active")
   console.log("funciona el boton")
 
+
 })
 
-closeModal.addEventListener("click", () => {
+closeModal?.addEventListener("click", () => {
   modalContain.classList.remove("modal-container-active")
   console.log("funciona el boton d cierre")
 })
+
+//CART-LIST DOM
+function ItemCart(cart) {
+  return `
+  <div class="products-cart">
+    <div>
+      <img src="${cart.image}" alt=""  class="img-product-cart">
+    </div>
+    <div>
+      <h5 class="cart-title">${cart.title}</h5>
+    </div>
+    <div class="cart-price">$${cart.price}</div>
+    <div class="delete-product">
+      <img class="delete" onclick="deleteItem(${cart.id})" src="./images/borrar.png" alt="">
+    </div>
+  </div>`
+}
+
+function addItemCart(cart) {
+  document.querySelector("#cart-items").innerHTML += ItemCart(cart)
+}
+//DELETE CART
+function renderCartItems() {
+
+}
+
 
 
 //PRODUCT-LIST
@@ -144,20 +199,20 @@ setInitialItems();
 //CARRITO
 
 
-const cart = []
+
 const btnsAdd = document.querySelectorAll("#add");
 
 btnsAdd.forEach((btnAdd) => {
-  
+
 
   btnAdd.addEventListener("click", () => {
-     const sumar = items.find((item) => item.id === +btnAdd.dataset.id)
-     cart.push(sumar)
-     console.log(cart)
+    const sumar = items.find((item) => item.id === +btnAdd.dataset.id)
+    cartItems.push(sumar)
+    console.log(cartItems)
 
 
   })
-  
+
 
 })
 

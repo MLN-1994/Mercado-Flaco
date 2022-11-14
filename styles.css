@@ -75,6 +75,36 @@
   opacity: 1;
   visibility: visible;
 }
+.close-modal-contain{
+  display: flex;
+  justify-content: end;
+  padding: 8px;
+}
+.close-modal{
+  width: 16px;
+  
+}
+
+.products-cart{
+  padding: 4px;
+  border: solid 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0.3px 0.3px 4px 0.1px;
+  border-radius: 6px;
+}
+.img-product-cart{
+  width: 65px;
+}
+.cart-price{
+  font-weight: bold;
+}
+.delete{
+  width: 22px;
+  cursor: pointer;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -82,6 +112,7 @@
 }
 .favs-img{
   width: 30px;
+  cursor: pointer;
 }
 
 
