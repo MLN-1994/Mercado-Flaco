@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <script defer src="app.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Document</title>
-  <script defer src="app.js"></script>
-</head>
-
-<body>
-  <header class="header">
-    <div class="page-name">
-      <h1>Mercado Flaco</h1> 
-    </div>
-    <div class="search-container">
-      <input id="search-input" class="search-input" type="search" placeholder="buscar" />
-    </div>
-    <div class="logo">
-      <div class="modal-carrito-contain">
-        <img id="open-modal" class="carrito-image" src="./images/carrito-de-compras (1).png" alt="" />
-        <div class="count-cart-favs">2</div>
+  <body>
+    <header class="header">
+      <div class="page-name">
+        <h1>Mercado Flaco</h1>
       </div>
-      <div>
+      <div class="search-container">
+        <input
+          id="search-input"
+          class="search-input"
+          type="search"
+          placeholder="buscar"
+        />
+      </div>
+      <div class="logo">
+        <div class="modal-carrito-contain">
+          <img
+            id="open-modal"
+            class="carrito-image"
+            src="./images/carrito-de-compras (1).png"
+            alt=""
+          />
+          <div class="count-cart-favs">2</div>
+        </div>
         <div>
-        <img src="./images/me-gusta.png" alt="" id="open-favs" class="favs-img">
-        <div class="count-cart-favs">2</div>
+          <div>
+            <img
+              src="./images/me-gusta.png"
+              alt=""
+              id="open-favs"
+              class="favs-img"
+            />
+            <div class="count-cart-favs">2</div>
+          </div>
+        </div>
       </div>
+    </header>
+    <hr />
+
+    <div id="modal-container" class="modal-container">
+      <div id="modal" class="modal">
+        <div class="close-modal-contain">
+          <img
+            class="close-modal"
+            id="modal-close"
+            src="./images/cerrar.png"
+            alt=""
+          />
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="modal-footer">
+          <div class="total-price" id="total-price">
+            $9000
+          </div>
+          <div class="pay">
+            Ir a pagar
+          </div>
+        </div>
       </div>
     </div>
-  </header>
-  <hr />
-    
 
-  <div id="modal-container" class="modal-container">
-    <div id="modal" class="modal">
-      <div class="close-modal-contain">
-        <img class="close-modal" id="modal-close" src="./images/cerrar.png" alt="">
-      </div>
-      <div class="cart-items" id="cart-items">
-        
-      </div>
-      
-
-      
-   
-    </div>
-  </div>
-
-  <section id="products-contain" class="products-contain"></section>
-</body>
-
+    <section id="products-contain" class="products-contain"></section>
+  </body>
 </html>

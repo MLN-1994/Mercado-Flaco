@@ -15,17 +15,16 @@
   padding: 8px;
   border-radius: 6px;
   border: transparent;
-  background-color: rgba(0, 0, 0, 0.3);
   width: 320px;
+  box-shadow: 0.1px 0.3px 0.3px 1px;
 }
 
 .carrito-image {
   width: 32px;
   cursor: pointer;
-
 }
 
-.count-cart-favs{
+.count-cart-favs {
   position: absolute;
   top: 34px;
   color: blue;
@@ -40,7 +39,7 @@
   padding: 8px;
   border-radius: 6px;
   border: transparent;
-  background-color: rgb(43 103 226);;
+  background-color: rgb(43 103 226);
   color: white;
   cursor: pointer;
   width: 100%;
@@ -69,23 +68,26 @@
   width: 500px;
   height: 500px;
   padding: 10px;
+  overflow: scroll;
 }
 
 .modal-container-active {
   opacity: 1;
   visibility: visible;
 }
-.close-modal-contain{
+
+.close-modal-contain {
   display: flex;
   justify-content: end;
   padding: 8px;
 }
-.close-modal{
+
+.close-modal {
   width: 16px;
-  
+  cursor: pointer;
 }
 
-.products-cart{
+.products-cart {
   padding: 4px;
   border: solid 1px;
   display: flex;
@@ -93,15 +95,39 @@
   gap: 10px;
   box-shadow: 0.3px 0.3px 4px 0.1px;
   border-radius: 6px;
+  justify-content: space-between;
 }
-.img-product-cart{
+
+.img-product-cart {
   width: 65px;
+  height: 50px;
 }
-.cart-price{
+
+.cart-price {
   font-weight: bold;
 }
-.delete{
+
+.delete {
   width: 22px;
+  cursor: pointer;
+}
+
+.total-price {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 6px;
+
+  text-align: center;
+  box-shadow: 0.3px 0.3px 4px 0.1px;
+}
+
+.pay {
+  margin-top: 8px;
+  background-color: rgb(43 103 226);
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -110,7 +136,8 @@
   align-items: center;
   gap: 20px;
 }
-.favs-img{
+
+.favs-img {
   width: 30px;
   cursor: pointer;
 }
@@ -164,12 +191,13 @@
 }
 
 
-.like-contain{
+.like-contain {
   display: flex;
   justify-content: end;
   padding: 2px;
 }
-.like{
+
+.like {
   width: 20px;
   cursor: pointer;
 }
