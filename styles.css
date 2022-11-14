@@ -9,14 +9,16 @@
   display: flex;
   justify-content: space-around;
   padding: 16px;
+  align-items: center;
 }
+
 
 .search-input {
   padding: 8px;
   border-radius: 6px;
   border: transparent;
   width: 320px;
-  box-shadow: 0.1px 0.3px 0.3px 1px;
+  box-shadow: 0.3px 0.3px 3px 0.1px ;
 }
 
 .carrito-image {
@@ -89,7 +91,7 @@
 
 .products-cart {
   padding: 4px;
-  border: solid 1px;
+  border: transparent;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -117,11 +119,14 @@
 }
 
 .total-price {
-  border: 1px solid;
+  margin-top: 8px;
+  border: transparent;
   padding: 10px;
   border-radius: 6px;
   text-align: center;
+  height: 42px;
   box-shadow: 0.3px 0.3px 4px 0.1px;
+  font-weight: bold;
 }
 
 .pay {
@@ -161,7 +166,7 @@
   padding: 16px;
   margin-top: 0;
   border-radius: 6px;
-  border: solid 1px;
+  border:transparent;
 }
 
 
