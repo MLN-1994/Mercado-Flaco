@@ -38,7 +38,7 @@ function Item(item) {
         <span class="description">${item.description}</span>
       </div>
       <div class="btn">
-        <buttom id="add" class="add">Sumar</buttom>
+        <buttom id="add" data-id="${item.id}" class="add">Sumar</buttom>
     </div>
   </div>`
 
@@ -145,11 +145,20 @@ setInitialItems();
 
 
 const cart = []
-const btnAdd = document.querySelector("#add")
-btnAdd.addEventListener("click", () => {
-  const sumar = items.find((item) => item.id === item.id)
-  cart.push(sumar)
-  console.log(cart)
+const btnsAdd = document.querySelectorAll("#add");
+
+btnsAdd.forEach((btnAdd) => {
+  
+
+  btnAdd.addEventListener("click", () => {
+     const sumar = items.find((item) => item.id === +btnAdd.dataset.id)
+     cart.push(sumar)
+     console.log(cart)
+
+
+  })
+  
+
 })
 
 
