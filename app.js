@@ -1,25 +1,25 @@
 
 let cartItems = []
 
-//MODAL-CARRITO
+//MODAL-CART
 const openModal = document.querySelector("#open-modal")
 const closeModal = document.querySelector("#modal-close")
 const modalContain = document.querySelector("#modal-container")
 
 
-
+//DELETE ITEMS CART
 function deleteItem(id) {
 
   document.querySelector("#cart-items").innerHTML = ""
 
-  
+
   const newCartsItems = cartItems.filter((item) => item.id != id);
 
-   newCartsItems.forEach((item) => {
+  newCartsItems.forEach((item) => {
     addItemCart(item)
-   });
+  });
 
-   cartItems = newCartsItems
+  cartItems = newCartsItems
 }
 
 
@@ -44,7 +44,31 @@ closeModal?.addEventListener("click", () => {
   console.log("funciona el boton d cierre")
 })
 
+
+//CART-COUNT
+
+const cartCount = document.querySelector("#count-cart-items")
+
+const renderCart = () => {
+  cartCount.innerText = cartItems.length
+}
+
+//TOTAL PRICE CART
+// const totalPrice = document.querySelector("#total-price")
+// const renderTotalPrice = ()=>{
+//   let total = 0
+//   cartItems.forEach((cart) =>{
+//     total += cart.price
+//   })
+//   totalPrice.innerText = total
+// }
+const totalPrice = document.querySelector("#total-price")
+const renderTotalPrice = () => {
+  totalPrice.innerText = "Total $ " + cartItems.reduce((acc, cart) => acc += cart.price, 0)
+
+}
 //CART-LIST DOM
+
 function ItemCart(cart) {
   return `
   <div class="products-cart">
@@ -63,11 +87,10 @@ function ItemCart(cart) {
 
 function addItemCart(cart) {
   document.querySelector("#cart-items").innerHTML += ItemCart(cart)
-}
-//DELETE CART
-function renderCartItems() {
 
 }
+
+
 
 
 
@@ -209,7 +232,8 @@ btnsAdd.forEach((btnAdd) => {
     const sumar = items.find((item) => item.id === +btnAdd.dataset.id)
     cartItems.push(sumar)
     console.log(cartItems)
-
+    renderCart()
+    renderTotalPrice()
 
   })
 
@@ -217,14 +241,7 @@ btnsAdd.forEach((btnAdd) => {
 })
 
 
-//AGREGAR A CARRITO
-// const addToCart = (id) =>{
-//   const product = items.find( (item) => item.id === id )
-//   cart.push(product)
-//   console.log(product)
-// }
-// addToCart(4)
-// addToCart(6)
+
 
 // Filtra los productos por el nombre y los agrega al DOM
 function searchItem(title) {

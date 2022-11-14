@@ -111,12 +111,15 @@
   width: 22px;
   cursor: pointer;
 }
+.delete-product{
+  display: flex;
+    gap: 6px
+}
 
 .total-price {
   border: 1px solid;
   padding: 10px;
   border-radius: 6px;
-
   text-align: center;
   box-shadow: 0.3px 0.3px 4px 0.1px;
 }
