@@ -11,7 +11,9 @@
   padding: 16px;
   align-items: center;
 }
-
+.title{
+  letter-spacing: 8px;
+}
 
 .search-input {
   padding: 8px;
@@ -29,8 +31,9 @@
 .count-cart-favs {
   position: absolute;
   top: 34px;
-  color: blue;
-  background: red;
+  color: white;
+  font-weight: bold;
+  background: #ff0000;
   border-radius: 100%;
   width: 16px;
   text-align: center;
@@ -170,6 +173,18 @@
 }
 
 
+.material-symbols-outlined {
+  cursor: pointer;
+  display: flex;
+  justify-content: end; 
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
 .img-product {
   border-radius: 6px;
   width: 100%;
@@ -199,13 +214,4 @@
 }
 
 
-.like-contain {
-  display: flex;
-  justify-content: end;
-  padding: 2px;
-}
 
-.like {
-  width: 20px;
-  cursor: pointer;
-}
