@@ -79,4 +79,5 @@ const items = [
       dues: 1599.83,
       description: "El combo de teclado y mouse Logitech es perfecto para ayudarte a desarrollar tus actividades diarias."
     },
+    
   ]
