@@ -57,6 +57,9 @@
   text-align: center;
   margin-top: 12px;
 }
+.add:hover{
+  background-color: rgb(4, 43, 122);
+}
 
 .modal-container {
   width: 100%;
@@ -181,7 +184,7 @@
 }
 
 
-.material-symbols-outlined {
+.material-symbols-outlined, span {
   cursor: pointer;
   display: flex;
   justify-content: end;
@@ -190,6 +193,10 @@
     'wght' 500,
     'GRAD' 0,
     'opsz' 48
+}
+.material-symbols-outlined:hover{
+  color:  rgb(43 103 226);
+ 
 }
 
 

@@ -62,7 +62,7 @@ const renderTotalPrice = () => {
   totalPrice.innerText = "Total $ " + cartItems.reduce((acc, cart) => acc += cart.price, 0)
 
 }
-//CART-LIST DOM
+//CART-LIST DOM FUNC
 
 
 function addItemCart(cart) {
@@ -72,7 +72,7 @@ function addItemCart(cart) {
 
 
 
-
+//ITEMS DOM FUNC
 function addItem(item) {
   document.getElementById("products-contain").innerHTML += Item(item);
 }
@@ -147,17 +147,24 @@ searchInput.addEventListener("keyup", (event) => {
 
 });
 
-// Agregar items a favoritos 
-  const addToFavs = document.querySelector("#saveIcon")
- 
-  addToFavs.addEventListener("click", (id) =>{
+//guardar favs
 
-  const setItems = localStorage.setItem("items", JSON.stringify(items))
-  setItems =  items.find((item) => item.id)
-  const getItems = localStorage.getItem("items");
+const saveIcons = document.querySelectorAll("#saveIcon");
+saveIcons.forEach((saveIcon) => {
+  saveIcon.addEventListener("click", () => {
 
- console.log('retrievedObject: ', JSON.parse(getItems));
-  } )
+    // Selecciona el item a agregar a la lista
+    const selectedItem = items.find((item) => item.id === +saveIcon.dataset.id);
+
+
+   localStorage.setItem('items', JSON.stringify(items));
+
+
+let getLocal = localStorage.getItem('items');
+
+
+console.log('Producto a guardar: ', selectedItem ,JSON.parse(getLocal));
    
-  
-
+    });
+})
+ 
