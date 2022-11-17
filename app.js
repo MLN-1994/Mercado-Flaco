@@ -154,7 +154,7 @@ saveIcons.forEach((saveIcon) => {
   saveIcon.addEventListener("click", () => {
 
     // Selecciona el item a agregar a la lista
-    const selectedItem = items.find((item) => item.id === +saveIcon.dataset.id);
+    const selectFav = items.find((item) => item.id === +saveIcon.dataset.id);
 
 
    localStorage.setItem('items', JSON.stringify(items));
@@ -163,7 +163,7 @@ saveIcons.forEach((saveIcon) => {
 let getLocal = localStorage.getItem('items');
 
 
-console.log('Producto a guardar: ', selectedItem ,JSON.parse(getLocal));
+console.log('Producto a guardar: ', selectFav ,JSON.parse(getLocal));
    
     });
 })
