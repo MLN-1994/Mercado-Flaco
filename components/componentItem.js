@@ -1,4 +1,4 @@
-// item html dom
+
 function Item(item) {
 
     return `<div class="product-box">

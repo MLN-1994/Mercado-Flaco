@@ -15,7 +15,7 @@ const renderCartItems = () => {
 
   });
 
-  
+
 }
 
 //DELETE ITEMS CART
@@ -155,16 +155,10 @@ saveIcons.forEach((saveIcon) => {
 
     // Selecciona el item a agregar a la lista
     const selectFav = items.find((item) => item.id === +saveIcon.dataset.id);
+    localStorage.setItem('favs', JSON.stringify(items));
+    let getLocal = localStorage.getItem('favs');
+    console.log('Producto a guardar: ', selectFav, JSON.parse(getLocal));
 
-
-   localStorage.setItem('items', JSON.stringify(items));
-
-
-let getLocal = localStorage.getItem('items');
-
-
-console.log('Producto a guardar: ', selectFav ,JSON.parse(getLocal));
-   
-    });
+  });
 })
- 
+
