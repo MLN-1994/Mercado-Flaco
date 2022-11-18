@@ -9,7 +9,7 @@ const renderCartItems = () => {
 
   document.querySelector("#cart-items").innerHTML = ""
 
-  cartItems.forEach((item, index) => {
+  cartItems.forEach((item) => {
 
     addItemCart(item);
 
@@ -21,7 +21,7 @@ const renderCartItems = () => {
 //DELETE ITEMS CART
 function deleteItem(id) {
 
-  cartItems = cartItems.filter((item) => item.id != id);
+  cartItems = cartItems.filter((item) => item.id != id) ;
 
   renderCartItems();
 
@@ -50,16 +50,15 @@ closeModal?.addEventListener("click", () => {
 //CART-COUNT
 
 const cartCount = document.querySelector("#count-cart-items")
-
 const renderCart = () => {
-  cartCount.innerText = cartItems.length
+cartCount.innerText = cartItems.length
 }
 
 //TOTAL PRICE CART
 
 const totalPrice = document.querySelector("#total-price")
 const renderTotalPrice = () => {
-  totalPrice.innerText = "Total $ " + cartItems.reduce((acc, cart) => acc += cart.price, 0)
+totalPrice.innerText = "Total $ " + cartItems.reduce((acc, cart) => acc += cart.price, 0)
 
 }
 //CART-LIST DOM FUNC
@@ -120,13 +119,10 @@ function searchItem(title) {
 
   // Items filtrados
   const filteredItems = items.filter((item) => {
-
     const itemTitle = item.title.toLowerCase();
     const searchTitle = title.toLowerCase();
 
-
     return itemTitle.includes(searchTitle);
-
   });
 
   // Limpiar el listado de items
@@ -139,12 +135,8 @@ function searchItem(title) {
 
 // Search input
 const searchInput = document.querySelector('#search-input');
-
-
 searchInput.addEventListener("keyup", (event) => {
-
   searchItem(event.target.value);
-
 });
 
 //guardar favs
