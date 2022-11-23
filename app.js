@@ -23,8 +23,12 @@ function deleteItem(id) {
 
   cartItems = cartItems.filter((item) => item.id != id) ;
 
-  renderCartItems();
 
+  renderCartItems();
+  //llamo a renderCart y me descuenta los items del producto al borrar
+// llamando totalprice descuento el precio del producto sumado
+  renderCart();
+  renderTotalPrice();
 }
 
 //open cart
