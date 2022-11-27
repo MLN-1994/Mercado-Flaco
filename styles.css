@@ -224,3 +224,11 @@
   color: rgb(112, 111, 111);
   font-size: 14px;
 }
+footer{
+  display: flex;
+  justify-content: center;
+}
+.info-footer{
+  font-size:16px;
+color: #b1b1b1;
+}
