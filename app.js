@@ -21,12 +21,12 @@ const renderCartItems = () => {
 //DELETE ITEMS CART
 function deleteItem(id) {
 
-  cartItems = cartItems.filter((item) => item.id != id) ;
+  cartItems = cartItems.filter((item) => item.id != id);
 
 
   renderCartItems();
   //llamo a renderCart y me descuenta los items del producto al borrar
-// llamando totalprice descuento el precio del producto sumado
+  // llamando totalprice descuento el precio del producto sumado
   renderCart();
   renderTotalPrice();
 }
@@ -55,14 +55,14 @@ closeModal?.addEventListener("click", () => {
 
 const cartCount = document.querySelector("#count-cart-items")
 const renderCart = () => {
-cartCount.innerText = cartItems.length
+  cartCount.innerText = cartItems.length
 }
 
 //TOTAL PRICE CART
 
 const totalPrice = document.querySelector("#total-price")
 const renderTotalPrice = () => {
-totalPrice.innerText = "Total $ " + cartItems.reduce((acc, cart) => acc += cart.price, 0)
+  totalPrice.innerText = "Total $ " + cartItems.reduce((acc, cart) => acc += cart.price, 0)
 
 }
 //CART-LIST DOM FUNC
@@ -149,9 +149,9 @@ const saveIcons = document.querySelectorAll("#saveIcon");
 saveIcons.forEach((saveIcon) => {
   saveIcon.addEventListener("click", () => {
 
-    // Selecciona el item a agregar a la lista
     const selectFav = items.find((item) => item.id === +saveIcon.dataset.id);
     localStorage.setItem('favs', JSON.stringify(items));
+    
     let getLocal = localStorage.getItem('favs');
     console.log('Producto a guardar: ', selectFav, JSON.parse(getLocal));
 
