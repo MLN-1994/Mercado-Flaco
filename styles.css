@@ -224,3 +224,19 @@
   color: rgb(112, 111, 111);
   font-size: 14px;
 }
+.banner-contain{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.banner{
+  border: solid 1px gray;
+  width: 100%;
+  padding: 16px;
+}
+.combo-title{
+  display: flex;
+  justify-content: center;
+  letter-spacing: 6px;
+  margin-bottom: 16px;
+}

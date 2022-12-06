@@ -1,0 +1,25 @@
+{
+    "promotions" : [
+        {
+            "id": "1",
+            "image": "https://http2.mlstatic.com/D_NQ_NP_964946-MLA49730477746_042022-O.webp",
+            "name": "Kit Gamer Noga Teclado Mouse Auricular"
+            
+        },
+        {
+            "id": "2",
+            "image": "https://http2.mlstatic.com/D_NQ_NP_979080-MLA51920902954_102022-O.webp",
+            "name": "Combo  Pc Gamer Core I9"
+        },
+        {
+            "id": "3",
+            "image": "https://http2.mlstatic.com/D_NQ_NP_601474-MLA44200291162_112020-O.webp",
+            "name": "Combo Actualizacion Pc Gamer Intel Core I9"
+        },
+        {
+            "id": "4",
+            "image": "https://http2.mlstatic.com/D_NQ_NP_946159-MLA51387754036_092022-O.webp",
+            "name": "Combo Actualizacion Pc Amd Ryzen 5"
+        }
+    ]
+}

@@ -158,3 +158,40 @@ saveIcons.forEach((saveIcon) => {
   });
 })
 
+
+
+
+// FETCH
+  // fetch("./promos.json")
+  //   .then(resp => resp.json())
+  //   .then(data => {
+  //     console.log(data)
+  //   })
+    
+  //   // const promos = document.querySelector("#promos")
+
+  //   data.forEach((promo) =>{
+  //     const promoHtml = `
+  //     <div class="product">
+  //     <h2>${promo.image}</h2>
+  //     <p>${promo.id}</p>
+  //   </div>
+  //     `
+  //     promos.innerHTML += promoHtml
+      
+  //   })
+     const promos = document.querySelector("#promos")
+     fetch(" ./promos.json")
+     .then((resp) => resp.json())
+     .then((data)=>{
+         console.log(data)
+         
+         promos.innerHTML = `
+         <h2>${JSON.stringify(data)}</h2>
+    
+         `
+     })
+     .catch((error) => {
+        console.log(error)
+    })
+
