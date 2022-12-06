@@ -180,18 +180,23 @@ saveIcons.forEach((saveIcon) => {
   //     promos.innerHTML += promoHtml
       
   //   })
-     const promos = document.querySelector("#promos")
+
+  function callPromos() {
+    const promos = document.querySelector("#promos")
      fetch(" ./promos.json")
      .then((resp) => resp.json())
      .then((data)=>{
          console.log(data)
-         
+         const myJson = JSON.stringify(data)
          promos.innerHTML = `
-         <h2>${JSON.stringify(data)}</h2>
+         <img ${myJson.image}/>
+         <h2>${myJson.name}</h2>
     
          `
      })
      .catch((error) => {
         console.log(error)
     })
+  }
+  callPromos()
 
