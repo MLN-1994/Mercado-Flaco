@@ -2,7 +2,7 @@
 function Item(item) {
 
     return `<div class="product-box">
-     <span id="saveIcon" data-id="${item.id}"  class="material-symbols-outlined">
+    <span data-save="${item.id}" data-id="${item.id}"  class="material-symbols-outlined">
      bookmark
      </span>
         <div class="img-contain">

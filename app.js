@@ -143,60 +143,101 @@ searchInput.addEventListener("keyup", (event) => {
   searchItem(event.target.value);
 });
 
+
+
 //guardar favs
 
-const saveIcons = document.querySelectorAll("#saveIcon");
+const saveIcons = document.querySelectorAll("[data-save]");
 saveIcons.forEach((saveIcon) => {
+
   saveIcon.addEventListener("click", () => {
 
-    const selectFav = items.find((item) => item.id === +saveIcon.dataset.id);
-    localStorage.setItem('favs', JSON.stringify(items));
-    
-    let getLocal = localStorage.getItem('favs');
-    console.log('Producto a guardar: ', selectFav, JSON.parse(getLocal));
+    // Guarda el id del item
+    const itemId = saveIcon.dataset.save;
+
+    // Busca el item en el array de items
+    const itemSelected = items.find((item) => item.id == itemId);
+
+    // Busca los items que ya entan guardados en el localStorage y si no hay, crea un array vacio
+    const savedItems = JSON.parse(localStorage.getItem("favs")) || [];
+
+    // Busca si el item ya esta guardado
+    const itemExists = savedItems.find((item) => item.id == itemId);
+
+    // Si el item ya esta guardado, lo elimina del array de items guardados, si no, lo agrega
+    if (itemExists) {
+
+      // Filtra los items guardados y crea un nuevo array sin el item seleccionado
+      const newSavedItems = savedItems.filter((item) => item.id != itemId);
+
+      // Guarda el nuevo array en el localStorage, sin el item en el que se hizo click.
+      localStorage.setItem("favs", JSON.stringify(newSavedItems));
+
+      // saveIcon.classList.remove("save-active");
+
+    // Si el item no esta guardado, lo agrega al array de items guardados
+    } else {
+
+      // Agrega el item seleccionado al array de items guardados
+      savedItems.push(itemSelected);
+
+      // Guarda el array de items guardados en el localStorage
+      localStorage.setItem("favs", JSON.stringify(savedItems));
+
+      // saveIcon.classList.add("save-active");
+
+    }
 
   });
+
 })
 
 
 
 
+// const saveIcons = document.querySelectorAll("#saveIcon");
+// saveIcons.forEach((saveIcon) => {
+//   saveIcon.addEventListener("click", () => {
+
+//     const selectFav = items.find((item) => item.id === +saveIcon.dataset.id);
+//     localStorage.setItem('favs', JSON.stringify(items));
+    
+//     let getLocal = localStorage.getItem('favs');
+//     console.log('Producto a guardar: ', selectFav, JSON.parse(getLocal));
+
+//   });
+// })
+
+
+
+
 // FETCH
-  // fetch("./promos.json")
-  //   .then(resp => resp.json())
-  //   .then(data => {
-  //     console.log(data)
-  //   })
-    
-  //   // const promos = document.querySelector("#promos")
+ 
+function callPromos() {
+  const promos = document.querySelector("#promos")
+  fetch(" ./promos.json")
+    .then((resp) => resp.json())
+    .then((data) => {
 
-  //   data.forEach((promo) =>{
-  //     const promoHtml = `
-  //     <div class="product">
-  //     <h2>${promo.image}</h2>
-  //     <p>${promo.id}</p>
-  //   </div>
-  //     `
-  //     promos.innerHTML += promoHtml
-      
-  //   })
-
-  function callPromos() {
-    const promos = document.querySelector("#promos")
-     fetch(" ./promos.json")
-     .then((resp) => resp.json())
-     .then((data)=>{
-         console.log(data)
-         const myJson = JSON.stringify(data)
-         promos.innerHTML = `
-         <img ${myJson.image}/>
-         <h2>${myJson.name}</h2>
     
-         `
-     })
-     .catch((error) => {
-        console.log(error)
+
+      data.promotions.forEach(promo => {
+
+        const promoHtml = `
+          <div class="promo-contain">
+          <img class="banner-imgs" src="${promo.image}" alt="">
+          <h4 class="banner-title">${promo.name}</h4>
+        </div>
+        `
+
+        promos.innerHTML += promoHtml;
+
+      })
+
+    
     })
-  }
-  callPromos()
-
+    .catch((error) => {
+      console.log(error)
+    })
+}
+callPromos()
