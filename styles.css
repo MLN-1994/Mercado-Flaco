@@ -256,4 +256,5 @@ flex-direction: column;
 }
 .banner-imgs{
   width: 60px;
+  object-fit: contain;
 }
